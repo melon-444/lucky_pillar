@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "killed":{
+            "trigger": "entity_killed_player",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:player"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "lucky_pillar:services/death_func_judge"
+    }
+
+}

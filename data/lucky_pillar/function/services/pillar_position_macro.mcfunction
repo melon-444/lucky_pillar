@@ -1,0 +1,1 @@
+summon marker ^ ^ ^192 {Tags:["pillar_marker"]}

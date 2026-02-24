@@ -1,0 +1,16 @@
+
+{
+    "pack": {
+      "description": {
+        "text": "幸运之柱\nAuthor:melon_444",
+        "color": "#64fa00",
+        "obfuscated": true
+      },
+      "min_format":[94],
+      "max_format":[94,1],
+      "supported_formats": [
+        94,
+        1024
+      ]
+    }
+}

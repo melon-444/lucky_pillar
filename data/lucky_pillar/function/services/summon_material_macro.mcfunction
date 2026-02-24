@@ -1,0 +1,1 @@
+$fill ~-4 -61 ~4 ~4 -61 ~-4 minecraft:$(material)

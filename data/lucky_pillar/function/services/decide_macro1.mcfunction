@@ -1,0 +1,1 @@
+$data remove storage lucky_pillar:io under_material[$(a)]

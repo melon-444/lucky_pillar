@@ -96,4 +96,9 @@ execute if score $gray lp_cnt matches ..3 run team join lp_gray @r[team=]
 
 execute as @a[team=] run tag @s add spec
 
+tp @a[team=!] 2000 0 2000
+execute as @a[tag=spec] run tp @r[team=!]
+execute as @a[gamemode=spectator] run tp @r[team=!]
+
+
 function lucky_pillar:services/initialize

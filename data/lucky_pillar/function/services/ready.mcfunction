@@ -5,11 +5,12 @@ effect clear @a slow_falling
 clear @a
 
 tag @a remove roted
-execute as @a[team=!] at @s run fill ~-1 ~ ~1 ~1 ~2 ~-1 minecraft:barrier hollow
-execute as @a[team=!] at @s run setblock ~ ~ ~ air replace
-execute as @a[team=!] at @s align xyz run spawnpoint @s ~.5 ~.5 ~.5
+tag @a remove current_team
+execute as @a[team=!admin,tag=!spec] at @s run fill ~-1 ~ ~1 ~1 ~2 ~-1 minecraft:barrier hollow
+execute as @a[team=!admin,tag=!spec] at @s run setblock ~ ~ ~ air replace
+execute as @a[team=!admin,tag=!spec] at @s align xyz run spawnpoint @s ~.5 ~.5 ~.5
 
-execute as @a[team=!] at @s run setblock ~ ~-3 ~ sea_lantern
+execute as @a[team=!admin,tag=!spec] at @s run setblock ~ ~-3 ~ sea_lantern
 
 execute as @a[team=lp_red] at @s run setblock ~ ~-2 ~ red_concrete
 execute as @a[team=lp_yellow] at @s run setblock ~ ~-2 ~ yellow_concrete
@@ -21,6 +22,9 @@ execute as @a[team=lp_white] at @s run setblock ~ ~-2 ~ white_concrete
 execute as @a[team=lp_gray] at @s run setblock ~ ~-2 ~ gray_concrete
 
 forceload remove 100 100 159 159
+
+effect give @a saturation 20 4 true
+effect give @a instant_health 20 4 true
 
 title @a reset
 title @a title {"text":"即将开始游戏",color:"red"}

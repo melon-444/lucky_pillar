@@ -4,7 +4,7 @@ title @a clear
 title @a times 0t 1s 5t
 title @a title {"text":"游戏开始",color:"red"}
 
-gamemode survival @a[team=!]
+gamemode survival @a[team=!admin,tag=!spec]
 
 data modify storage lucky_pillar:io game_state set value "running"
 

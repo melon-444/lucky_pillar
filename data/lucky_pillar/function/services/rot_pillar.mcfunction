@@ -1,4 +1,4 @@
-execute store result score $rotating_cnt lp_cnt if entity @a[team=!,tag=!roted]
+execute store result score $rotating_cnt lp_cnt if entity @a[team=!admin,tag=!spec,tag=!roted]
 execute if score $rotating_cnt lp_cnt matches ..0 run return run schedule function lucky_pillar:services/ready 1t
 
 execute as @n[tag=rot_pillar,type=marker] at @s run rotate @s ~45 ~

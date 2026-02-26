@@ -13,9 +13,6 @@ scoreboard players operation $sec lp_cnt %= $const_60 lp_cnt
 #bossbar可见
 bossbar set border_shrink visible true
 
-tp @a[team=!] 2000 0 2000
-execute as @a[tag=spec] run tp @r[team=!]
-execute as @a[gamemode=spectator] run tp @r[team=!]
 
 effect give @a[team=!] slow_falling infinite 0 true
 

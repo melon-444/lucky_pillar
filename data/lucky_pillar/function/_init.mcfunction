@@ -2,7 +2,6 @@
 # 初始化lucky_pillar模块
 function lucky_pillar:services/uninstall
 
-data modify storage lucky_pillar:io game_state set value "waiting"
 #todo 修改缩圈表
 data modify storage lucky_pillar:io shirnk_time set value [180,180,180,180,180,180,180,180,180,180,180,180,180,180,180,180,180,180,180,180]
 data modify storage lucky_pillar:io under_material set value ["cobweb","lava","water","iron_chain","waxed_copper_chain","slime_block"]
@@ -47,18 +46,18 @@ setblock 0 -64 0 acacia_sign
 
 scoreboard objectives add death_cnt deathCount
 
-scoreboard objectives add out_boardcast dummy
-scoreboard players set $red out_boardcast 0
-scoreboard players set $yellow out_boardcast 0
-scoreboard players set $green out_boardcast 0
-scoreboard players set $blue out_boardcast 0
-scoreboard players set $pink out_boardcast 0
-scoreboard players set $cyan out_boardcast 0
-scoreboard players set $white out_boardcast 0
-scoreboard players set $gray out_boardcast 0
+scoreboard objectives add out_broadcast dummy
+scoreboard players set $red out_broadcast 0
+scoreboard players set $yellow out_broadcast 0
+scoreboard players set $green out_broadcast 0
+scoreboard players set $blue out_broadcast 0
+scoreboard players set $pink out_broadcast 0
+scoreboard players set $cyan out_broadcast 0
+scoreboard players set $white out_broadcast 0
+scoreboard players set $gray out_broadcast 0
 
 scoreboard objectives add area_cleaner dummy
-scoreboard players set $start_x_chunk area_cleaner 111
+scoreboard players set $start_x_chunk area_cleaner 110
 scoreboard players set $start_z_chunk area_cleaner 111
 scoreboard players set $len_x_chunk area_cleaner 28
 scoreboard players set $len_z_chunk area_cleaner 28
@@ -83,8 +82,12 @@ bossbar set border_shrink visible false
 
 tp @a 0 -60 0
 
+data modify storage lucky_pillar:io game_state set value "cleaning"
+
 #清理地图
 function lucky_pillar:_clean
 
 
-
+tp @a 0 -60 0
+gamemode adventure @a[team=!admin]
+data modify storage lucky_pillar:io game_state set value "waiting"

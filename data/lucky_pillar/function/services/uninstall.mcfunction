@@ -1,7 +1,7 @@
 scoreboard objectives remove lp_cnt
 scoreboard objectives remove area_cleaner
 scoreboard objectives remove death_cnt
-scoreboard objectives remove out_boardcast
+scoreboard objectives remove out_broadcast
 
 bossbar remove border_shrink
 
